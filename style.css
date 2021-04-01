@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-row: repeat(5, 1fr);
+}
+
+header {
+  display: grid;
+  grid-row: 50px 1fr;
+  border: 1px solid black;
+}
+
+.left-nav {
+}
+
+.right-nav {
+}
+
+.about-me {
+  display: grid;
+  border: 1px solid black;
+}
+
+.portfolio {
+  display: grid;
+  border: 1px solid black;
+}
+
+footer {
+  border: 1px solid black;
+}
