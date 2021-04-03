@@ -1,33 +1,116 @@
+:root {
+  --portfolio-background: #353839;
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
   min-height: 100vh;
 
   display: grid;
-  grid-row: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto) 25px;
 }
 
 header {
-  display: grid;
-  grid-row: 50px 1fr;
+  background-color: #0abab5;
+  color: white;
+  padding-bottom: 400px;
+
   border: 1px solid black;
 }
 
-.left-nav {
+.navigation.top-bar-nav {
+  display: grid;
+  grid-template-columns: 1fr, auto;
 }
 
-.right-nav {
+.top-bar-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.top-bar-nav ul {
+  list-style: none;
+  justify-self: right;
+}
+
+.top-bar-nav ul,
+.top-bar-nav h1 {
+  padding-top: 20px;
+}
+
+.top-bar-nav h1 {
+  font-size: 1.2rem;
+  font-family: Tahoma;
+  letter-spacing: 0.4px;
+
+  padding-left: 22px;
+}
+
+.top-bar-nav ul li {
+  display: inline;
+  padding: 7px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px grey;
+  color: #0abab5;
+}
+
+.introduction {
+  /* grid-area: introduction; */
+  display: grid;
+  grid-template:
+    ". h2 . " 1fr
+    ". p . " /
+    1fr 1fr 1fr;
+}
+
+.introduction h2 {
+  grid-area: h2;
+  place-content: center;
+  padding-top: 110px;
+  font-size: 5rem;
+  letter-spacing: 1.5px;
+  line-height: 100px;
+}
+
+.introduction p {
+  grid-area: p;
+  place-content: center;
+  padding-top: 20px;
+  font-size: 0.82rem;
+  letter-spacing: 0.7px;
+  line-height: 25px;
+}
+
+.introduction span.react {
+  color: #343434;
+  font-weight: bold;
+}
+
+.introduction span.eco {
+  font-style: italic;
+  text-decoration: black underline;
 }
 
 .about-me {
-  display: grid;
+  grid-area: about-me;
+  /* display: grid; */
   border: 1px solid black;
 }
 
 .portfolio {
+  grid-area: portfolio;
   display: grid;
   border: 1px solid black;
 }
