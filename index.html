@@ -8,78 +8,96 @@
     <title>Full-Stack Portfolio</title>
   </head>
   <body>
-    <div class="container">
+    <div id="top" class="container">
       <header class="navigation">
         <nav class="top-bar-nav">
             <h1>Tatsiana Kudrashova</h1>
             <ul>
-              <li>About me</li>
-              <li>Portfolio</li>
-              <li>Experienece</li>
+              <li>
+                <a href="#about-me">About me</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
             </ul>
         </nav>
         <div class="introduction">
             <h2>Hiring A Full-Stack Developer?</h2>
             <p>
-            I have experienece with<span class="react">React</span>,<span class="react">NodeJS</span> and <span class="react">Typescript</span>. I would love to
+            I have experienece with <span class="react">React</span>,<span class="react">NodeJS</span> and <span class="react">Typescript</span>. I would love to
             work at an <span class="eco">innovative</span> and <span class="eco">eco-friendly</span> start-up in the <span class="react">sustainable
             energy sector</span>.
             </p>
         </div>
-    </header>
-    <main>
-      <section class="about-me">
-        <h2>About me</h2>
-        <h3>Introduction</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic omnis aliquid voluptate aut consequuntur facilis maiores ducimus odit exercitationem ipsum, neque suscipit tenetur nihil itaque quia quasi animi. Consequatur, deleniti.</p>
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>HTML & CSS</li>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>NodeJS</li>
-          </ul>
-        </secttion>
-
         
-       <section class="portfolio">
+    </header>
+    <!-- <hr> -->
+    
+    <main>
+      <section id="about-me" class="about-me-container">
+        <div class="about-me">
+            <h2 class="title">About me</h2>
+            <h3 class="introduction">Introduction</h3>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic omnis aliquid voluptate aut consequuntur facilis maiores ducimus odit exercitationem ipsum, neque suscipit tenetur nihil itaque quia quasi animi. Consequatur, deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe vitae, quae obcaecati accusantium, praesentium, ullam atque reiciendis modi voluptates nisi at repellat. Placeat perspiciatis aliquam eos deleniti doloribus, expedita praesentium?</p>
+            <h3 class="skills">Technical Skills</h3>
+            <ul>
+              <li>HTML & CSS</li>
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>NodeJS</li>
+              </ul>
+        </div>
+        </section>
+        
+        <!-- <hr> -->
+       <section id="portfolio" class="portfolio-container">
           <h2>Portfolio</h2>
           <div class="articls">
             <article class="articl-left">
-              <h3>Title</h3>
+              <h3 class="title">Quotebook</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, adipisci voluptatem quis vero optio quae animi esse totam eius! Dolorum reprehenderit, ipsam in natus iusto delectus minima ipsa a esse.</p>
-              <h4>Read more</h4>
-              <a href="#">GitHub Repo</a>
+              <a href="pages/quotebook.html" class="read-more-button">Read more</a>
+              <a href="https://github.com/tati89/boolean-uk-html-quotebook" class="github">GitHub Repo</a>
             </article>
 
             <article class="articl-mid">
-              <h3>Title</h3>
+              <h3 class="title">Gymtastic</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, adipisci voluptatem quis vero optio quae animi esse totam eius! Dolorum reprehenderit, ipsam in natus iusto delectus minima ipsa a esse.</p>
-              <h4>Read more</h4>
-              <a href="#">GitHub Repo</a>
+              <a href="pages/gymtastic.html" class="read-more-button">Read more</a>
+              <a href="https://github.com/tati89/boolean-uk-html-gymtastic" class="github">GitHub Repo</a>
             </article>
 
             <article class="articl-bottom">
-              <h3>Title</h3>
+              <h3 class="title">Tribute</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, adipisci voluptatem quis vero optio quae animi esse totam eius! Dolorum reprehenderit, ipsam in natus iusto delectus minima ipsa a esse.</p>
-              <h4>Read more</h4>
-              <a href="#">GitHub Repo</a>
+              <a href="pages/tribute.html" class="read-more-button">Read more</a>
+              <a href="https://github.com/tati89/boolean-uk-html-tribute" class="github">GitHub Repo</a>
             </article>
           </div>
         </section>
-        
 
-        <section class="experienece">
-          <h3>Job Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed enim omnis placeat nostrum commodi laudantium! Tempore culpa sit magni, officiis dolorum maiores doloremque ab iusto eaque, esse ipsa laborum.</p>
-          <h3>Job Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed enim omnis placeat nostrum commodi laudantium! Tempore culpa sit magni, officiis dolorum maiores doloremque ab iusto eaque, esse ipsa laborum.</p>
+        <!-- <hr> -->
+        <section id="experience" class="experience-container">
+          <div class="experience">
+            <h2>Experienece</h2>
+              <h3 class="job-1">Job Title</h3>
+              <p class="description-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed enim omnis placeat nostrum commodi laudantium! Tempore culpa sit magni, officiis dolorum maiores doloremque ab iusto eaque, esse ipsa laborum.</p>
+              <h3 class="job-2">Job Title</h3>
+              <p class="description-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed enim omnis placeat nostrum commodi laudantium! Tempore culpa sit magni, officiis dolorum maiores doloremque ab iusto eaque, esse ipsa laborum.</p>
+          </div>
         </section>
       </main>
 
+      <a class="back-to-top-button" href="#top">
+          Back</br>To</br>Top
+      </a>
+      
       <footer>
-        <h5>Tatsiana Kudrashova</h5>
+        <h5>&copy; Tatsiana Kudrashova</h5>
       </footer>
     </body>
   </div>

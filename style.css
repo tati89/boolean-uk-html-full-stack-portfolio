@@ -1,5 +1,9 @@
 :root {
-  --portfolio-background: #353839;
+  --dark-purple: #440a67;
+  --light-purple: #93329e;
+  --light-pink: #ffe3fe;
+  --bright-yellow: #fef502;
+  --violet: #b4aee8;
 }
 
 * {
@@ -16,20 +20,20 @@ html {
   min-height: 100vh;
 
   display: grid;
-  grid-template-rows: repeat(4, auto) 25px;
+  grid-template:
+    "navigation" auto
+    "about-me-container" auto
+    "portfolio-container" auto
+    "experience-container" auto
+    "footer" auto /
+    auto;
 }
 
-header {
-  background-color: #0abab5;
-  color: white;
-  padding-bottom: 400px;
-
-  border: 1px solid black;
-}
-
-.navigation.top-bar-nav {
-  display: grid;
-  grid-template-columns: 1fr, auto;
+/* NAVIGATION GRID ROW 1 */
+.navigation {
+  background-color: var(--dark-purple);
+  color: var(--light-pink);
+  padding-bottom: 140px;
 }
 
 .top-bar-nav {
@@ -51,7 +55,7 @@ header {
   font-size: 1.2rem;
   font-family: Tahoma;
   letter-spacing: 0.4px;
-
+  color: var(--bright-yellow);
   padding-left: 22px;
 }
 
@@ -60,14 +64,19 @@ header {
   padding: 7px;
   margin-right: 20px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: bold;
   box-shadow: 1px 1px 4px grey;
-  color: #0abab5;
+  color: var(--dark-purple);
+  background-color: var(--light-pink);
+}
+
+.top-bar-nav ul li a {
+  text-decoration: none;
+  color: var(--dark-purple);
 }
 
 .introduction {
-  /* grid-area: introduction; */
   display: grid;
   grid-template:
     ". h2 . " 1fr
@@ -94,27 +103,258 @@ header {
 }
 
 .introduction span.react {
-  color: #343434;
   font-weight: bold;
+  color: var(--bright-yellow);
 }
 
 .introduction span.eco {
   font-style: italic;
-  text-decoration: black underline;
+  text-decoration: var(--bright-yellow) underline;
+}
+
+/* ABOUT ME SECTION GRID ROW2 */
+.about-me-container {
+  display: grid;
+  padding: 20px 0px;
 }
 
 .about-me {
-  grid-area: about-me;
-  /* display: grid; */
-  border: 1px solid black;
-}
-
-.portfolio {
-  grid-area: portfolio;
   display: grid;
-  border: 1px solid black;
+  grid-template:
+    ". title ." auto
+    ". introduction ." auto
+    " . p . " auto
+    ". skills . " auto
+    ". ul ." auto /
+    1fr 65ch 1fr;
+
+  padding: 20px 0px;
+  margin-bottom: 20px;
 }
 
+.about-me .title {
+  grid-area: title;
+  padding-bottom: 10px;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.about-me .introduction {
+  grid-area: introduction;
+  padding-top: 20px;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.about-me .p {
+  grid-area: p;
+  padding-top: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+}
+
+.about-me .skills {
+  grid-area: skills;
+  padding: 30px 0px;
+  grid-area: skills;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 550;
+  padding-bottom: 10px;
+}
+
+.about-me ul {
+  grid-area: ul;
+  columns: 2;
+  padding-left: 10px;
+  margin: 10px;
+  justify-self: start;
+}
+
+.about-me ul li {
+  justify-content: start;
+  margin-left: 20px;
+  padding-right: 80px;
+  line-height: 1.5rem;
+}
+
+/* PORTFOLIO SECTION GRID ROW 3 */
+.portfolio-container {
+  grid-area: portfolio-container;
+  padding: 40px 30px;
+  display: grid;
+  background-color: var(--light-pink);
+}
+
+.portfolio-container h2 {
+  display: grid;
+  padding-bottom: 30px;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.portfolio-container .articls {
+  display: grid;
+
+  grid-template:
+    "articl-left articl-mid articl-bottom" auto /
+    1fr 1fr 1fr;
+  grid-gap: 70px;
+}
+
+.articls .articl-left {
+  grid-area: articl-left;
+  padding: 20px;
+  background-color: white;
+  border: 4px solid var(--light-purple);
+  border-radius: 6px;
+}
+
+.articls .articl-mid {
+  grid-area: articl-mid;
+  padding: 20px;
+  background-color: white;
+  border: 4px solid var(--light-purple);
+  border-radius: 6px;
+}
+
+.articls .articl-bottom {
+  grid-area: articl-bottom;
+  padding: 20px;
+  background-color: white;
+  border: 4px solid var(--light-purple);
+  border-radius: 6px;
+}
+
+.articls .title {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 15;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.articls p {
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.articls .read-more-button {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+  background-color: var(--light-purple);
+  color: white;
+}
+
+.articls .github {
+  display: block;
+  color: var(--light-purple);
+  text-align: center;
+  padding-top: 15px;
+}
+
+/* EXPERIENCE SECTION GRID ROW 4 */
+.experience-container {
+  display: grid;
+  padding-top: 20px;
+}
+
+.experience {
+  display: grid;
+  grid-template:
+    ". h2 . " auto
+    ". job-1 ." auto
+    ". description-1 ." auto
+    " . job-2 . " auto
+    ". description-2 . " auto /
+    1fr 65ch 1fr;
+
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+
+.experience h2 {
+  grid-area: h2;
+  padding-bottom: 10px;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.job-1 {
+  grid-area: job-1;
+  padding-top: 20px;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.description-1 {
+  grid-area: description-1;
+  padding-top: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+}
+
+.job-2 {
+  grid-area: job-2;
+  padding-top: 20px;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.description-2 {
+  grid-area: description-2;
+  padding-top: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+}
+
+/* I prefer desighn without horizontal lines :) */
+
+/* hr {
+  border: none;
+  height: 4px;
+  color: #150e56;
+  background-color: #150e56;
+} */
+
+/* BACK TO TOP BUTTON */
+.back-to-top-button {
+  position: sticky;
+  background-color: var(--dark-purple);
+  color: var(--bright-yellow);
+  text-decoration: none;
+  bottom: 50px;
+  left: 95%;
+  display: block;
+  width: 50px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+/* FOOTER GRID ROW 5 */
 footer {
-  border: 1px solid black;
+  padding: 20px;
+  background-color: var(--dark-purple);
+  color: var(--bright-yellow);
 }
