@@ -91,6 +91,12 @@ html {
   font-size: 5rem;
   letter-spacing: 1.5px;
   line-height: 100px;
+
+  background: #a25bcf; /* fallback for old browsers */
+  background: -webkit-linear-gradient(left, #802ab5, #a25bcf);
+  background: linear-gradient(to left, #802ab5, #a25bcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .introduction p {
